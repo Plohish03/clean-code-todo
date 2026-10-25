@@ -10,6 +10,13 @@
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{html,css,json,md}": "prettier --check"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Plohish03/clean-code-todo.git"
