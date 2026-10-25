@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Plohish03/clean-code-todo.git"
