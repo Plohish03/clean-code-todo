@@ -114,14 +114,14 @@ const bindTaskEvents = function (listItem, onCheckboxChange) {
   checkBox.onchange = onCheckboxChange;
 };
 
-//for each list item
-for (let i = 0; i < todoList.children.length; i++) {
-  bindTaskEvents(todoList.children[i], moveToCompleted);
-}
+const bindListEvents = function (list, checkboxHandler) {
+  for (const listItem of list.children) {
+    bindTaskEvents(listItem, checkboxHandler);
+  }
+};
 
-for (let i = 0; i < completedList.children.length; i++) {
-  bindTaskEvents(completedList.children[i], moveToTodo);
-}
+bindListEvents(todoList, moveToCompleted);
+bindListEvents(completedList, moveToTodo);
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
